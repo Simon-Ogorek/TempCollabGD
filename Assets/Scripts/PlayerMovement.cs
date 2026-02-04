@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float gravity = 0.1f;
     [SerializeField]
     float jumpForce = 0.2f;
+    float friction = 0.9f;
 
     [Header("Constraint Values")]
     [SerializeField]
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        velocityVector *= friction;
+
         /* Change this out for the new input system */
         inputVector = Vector3.zero;
 
