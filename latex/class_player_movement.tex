@@ -1,0 +1,66 @@
+\doxysection{Player\+Movement Class Reference}
+\hypertarget{class_player_movement}{}\label{class_player_movement}\index{PlayerMovement@{PlayerMovement}}
+
+
+Moves the player around using a Character Controller.  
+
+
+Inheritance diagram for Player\+Movement:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_movement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_movement_abf3660ca2b1a352b4a9da98437c61aa3}\label{class_player_movement_abf3660ca2b1a352b4a9da98437c61aa3} 
+void {\bfseries Start} ()
+\item 
+\Hypertarget{class_player_movement_a0caaa871b9ef680c9f02bd0e22c77db1}\label{class_player_movement_a0caaa871b9ef680c9f02bd0e22c77db1} 
+void {\bfseries Fixed\+Update} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_movement_a6800716352b83358ea16bc706dd88cbb}\label{class_player_movement_a6800716352b83358ea16bc706dd88cbb} 
+float {\bfseries speed} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em How fast the player moves in X and Z. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_ac0ce901b83befc8913174927ee387b01}\label{class_player_movement_ac0ce901b83befc8913174927ee387b01} 
+float {\bfseries gravity} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Applied every frame where the player isnt grounded. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}\label{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6} 
+float {\bfseries jump\+Force} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em Force applied on jump. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_ab283964356555ec92b93f76a1c01a126}\label{class_player_movement_ab283964356555ec92b93f76a1c01a126} 
+float {\bfseries friction} = 0.\+9f
+\begin{DoxyCompactList}\small\item\em Multiplied against velocity every frame (0 \texorpdfstring{$<$}{<} f \texorpdfstring{$<$}{<} 1). \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_aeecdd193603932e017fa4dfb7421c955}\label{class_player_movement_aeecdd193603932e017fa4dfb7421c955} 
+float {\bfseries max\+Fall\+Speed} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em How fast y velocity can be (+-\/). \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_aa7112c28100cf6d744df13f316ca65c3}\label{class_player_movement_aa7112c28100cf6d744df13f316ca65c3} 
+float {\bfseries max\+Walk\+Velocity} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em How fast x and y velocity can be by default (+-\/). \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_afd8a11472ac0951da0c6226c8ca3ead7}\label{class_player_movement_afd8a11472ac0951da0c6226c8ca3ead7} 
+float {\bfseries max\+Sprint\+Velocity} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\vert$}{|} Not Implemented \texorpdfstring{$\vert$}{|} How fast x and y velocity can be if sprinting (+-\/) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_a52ab2d03fb3f61b818b85c4e8b7af7b6}\label{class_player_movement_a52ab2d03fb3f61b818b85c4e8b7af7b6} 
+Vector3 {\bfseries input\+Vector}
+\begin{DoxyCompactList}\small\item\em What the player inputted, resets every frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_aa0d3620337e2176c8a6fb86b13abbc3a}\label{class_player_movement_aa0d3620337e2176c8a6fb86b13abbc3a} 
+Vector3 {\bfseries velocity\+Vector}
+\begin{DoxyCompactList}\small\item\em How fast the player is. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_a578de88c43565a434a6b24766b3a1abc}\label{class_player_movement_a578de88c43565a434a6b24766b3a1abc} 
+Character\+Controller {\bfseries controller}
+\item 
+\Hypertarget{class_player_movement_ac5d4a75424f345bfa27d0d680aae5e84}\label{class_player_movement_ac5d4a75424f345bfa27d0d680aae5e84} 
+bool {\bfseries grounded}
+\begin{DoxyCompactList}\small\item\em Is the player grounded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Moves the player around using a Character Controller. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Assets/\+\+Scripts/\+Player\+Movement.\+cs\end{DoxyCompactItemize}

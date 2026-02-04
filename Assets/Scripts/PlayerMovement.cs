@@ -1,38 +1,59 @@
-
-
-
 using UnityEngine;
+using System;
+/// <summary>
+/// Moves the player around using a Character Controller
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Values")]
+
+    /// @brief How fast the player moves in X and Z
     [SerializeField]
     float speed = 0.05f;
+
+    /// @brief Applied every frame where the player isnt grounded
     [SerializeField]
     float gravity = 0.1f;
+
+    /// @brief Force applied on jump
     [SerializeField]
     float jumpForce = 0.2f;
+
+    /// @brief Multiplied against velocity every frame (0 < f < 1)
+    [SerializeField, Range(0,1)]
     float friction = 0.9f;
 
     [Header("Constraint Values")]
+
+    /// @brief How fast y velocity can be (+-)
     [SerializeField]
     float maxFallSpeed = 0.5f;
+
+    /// @brief How fast x and y velocity can be by default (+-)
     [SerializeField]
     float maxWalkVelocity = 0.2f;
-    [SerializeField]
+
+    /// @brief | Not Implemented | How fast x and y velocity can be if sprinting (+-)
+    [SerializeField, Obsolete("Not implemented yet")]
     float maxSprintVelocity = 0.5f;
     
+    /// @brief What the player inputted, resets every frame
     private Vector3 inputVector;
+
+    /// @brief How fast the player is
     private Vector3 velocityVector;
+
     private CharacterController controller;
+
+    /// @brief Is the player grounded
     private bool grounded;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         inputVector = Vector3.zero;
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         velocityVector *= friction;
