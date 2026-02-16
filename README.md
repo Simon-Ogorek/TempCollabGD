@@ -202,48 +202,49 @@ Yell Shockwave
 Damage Indicator
 
 IT Team
-Player Movement
+Player Movement (Must Have)
 Walking
 Running
 Jumping
 
-Eidos 
+Eidos (Must Have)
 Behavior
 Catching/Scanning Mechanism
-Merging/Evolving
+Merging/Evolving (Should Have)
 If part of team, follow player
-Combat
+Combat (Must Have)
 Health
 Action
 Freeze time turn based abilities
 Lock on to enemy
 Healing Items
-Camera Movement 
+Camera Movement  (Must Have)
 Third person over the shoulder following the player
 Switching between camera targets (eidos)
 Systems above to have basic implementation by March 9 for basic game loop
-Animation transitions
+Animation transitions (Must Have)
 Walking/Running/Jumping
 Attacks
-Main Quest Side Quest System
+Main Quest Side Quest System (Should Have)
 UI shows player where to go
 Map
 Compass
-NPCs
+NPCs (Should Have)
 Can talk to the player
 Give the player items
 Battle the player
-Dialogue
+Dialogue (Should Have)
 Text bubbles
 Player can respond
-Menus
+Menus (Must/Should Have)
 Pause
 Team
 Quests
 Map
 Bag (Items)
-Compendium
+Compendium (Nice to Have)
 Keeps track of eidos seen
+
 
 
 If images don't show up, you can drag and drop them into the Github text editor and they'll upload to the location.
