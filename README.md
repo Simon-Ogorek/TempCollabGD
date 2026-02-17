@@ -185,6 +185,8 @@ The Tessamark is a core progression mechanic
 * Journey to Village of Principles   
 * Additional Regions follow the structure of the Four Ps
 
+<img width="560" height="180" alt="villageArt" src="https://github.com/user-attachments/assets/90f92978-7c96-4855-ba79-6da96ceb2030" />
+
 ## **Art Direction** {#art-direction}
 
 **Eidos**
@@ -207,6 +209,8 @@ The Tessamark is a core progression mechanic
 * Low-poly assets with high-poly baked on  
 * High resolution textures  
 * Base character model to be easily reused
+
+<img width="563" height="160" alt="combatArt" src="https://github.com/user-attachments/assets/d172edec-d18a-4085-a789-0b8124464645" />
 
 # **Development** {#development}
 
