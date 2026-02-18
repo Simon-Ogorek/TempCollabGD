@@ -74,7 +74,14 @@ public class BattleManager : MonoBehaviour
             return;
         }
 
-        combatantList.Add(playerMovement.transform);
+        Combatant[] allCombatants = FindObjectsByType<Combatant>(FindObjectsSortMode.None);
+        foreach (Combatant combatant in allCombatants)
+        {
+            if (Vector3.Distance(combatant.transform.position, playerMovement.transform.position) < enemyAttentionRadius)
+            {
+                combatantList.Add(combatant.transform);
+            }
+        }
 
         Debug.LogWarning(combatantList.Count);
 

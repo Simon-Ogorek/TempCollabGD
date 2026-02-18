@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EidosBattle : Combatent
+public class EidosBattle : Combatant
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Combatent : MonoBehaviour
+public class Combatant : MonoBehaviour
 {
     //general combatent script for player and eidos partners to build off
     [SerializeField]
