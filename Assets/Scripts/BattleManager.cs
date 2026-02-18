@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
 using Unity.Mathematics;
-using System.Numerics;
 
 public class BattleManager : MonoBehaviour
 {
@@ -32,7 +31,9 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField]
     private GameObject arenaVisualPrefab;
+    private GameObject arenaVisualInstance;
     private Material arenaVisualMat;
+    private Vector3 centerOfArena;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,9 +43,17 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state == BattleState.Active)
+        if (state == BattleState.Active && arenaVisualInstance)
         {
-            float distanceFromCenterCoefficient = Vector3.Distance()
+            float distanceFromCenterCoefficient = Vector3.Distance(playerMovement.transform.position, centerOfArena) /
+              arenaVisualInstance.transform.localScale.x/2;
+
+            Debug.Log(distanceFromCenterCoefficient);
+            if (distanceFromCenterCoefficient > 0.7f)
+                arenaVisualMat.color = new Color(arenaVisualMat.color.r, arenaVisualMat.color.g, arenaVisualMat.color.b, distanceFromCenterCoefficient * 180/255);
+            else
+                arenaVisualMat.color = new Color(arenaVisualMat.color.r, arenaVisualMat.color.g, arenaVisualMat.color.b, 0);
+
         }
     }
 
@@ -95,7 +104,7 @@ public class BattleManager : MonoBehaviour
 
         Debug.LogWarning(combatantList.Count);
 
-        Vector3 centerOfArena = DetermineCenterOfBattle(combatantList);
+        centerOfArena = DetermineCenterOfBattle(combatantList);
 
         float arenaRadius = Vector3.Distance(centerOfArena, playerMovement.transform.position);
 
@@ -108,11 +117,12 @@ public class BattleManager : MonoBehaviour
         arenaCollider.center = transform.InverseTransformPoint(centerOfArena);
         arenaCollider.height = 100;
 
-        GameObject arenaVisual = Instantiate(arenaVisualPrefab);
-        arenaVisual.transform.position = centerOfArena;
-        arenaVisual.transform.localScale = new Vector3(arenaRadius * 2, 1000, arenaRadius * 2);
+        arenaVisualInstance = Instantiate(arenaVisualPrefab);
+        arenaVisualInstance.transform.position = centerOfArena;
+        arenaVisualInstance.transform.localScale = new Vector3(arenaRadius * 2, 1000, arenaRadius * 2);
 
-        arenaVisualMat = arenaVisual.GetComponent<Renderer>().material;
+        arenaVisualMat = arenaVisualInstance.GetComponentInChildren<Renderer>().material;
+        
 
         }
     }
