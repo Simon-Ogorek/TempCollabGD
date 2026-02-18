@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
     private float awarenessRange = 5f;
     [SerializeField]
     private Transform player;
+    [SerializeField]
+    private GameObject battleManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +19,7 @@ public class Enemy : MonoBehaviour
     {
         if (Vector3.Distance(player.position, transform.position) < awarenessRange)
         {
-            GetComponent<BattleManager>().StartBattle();
+            battleManager.GetComponent<BattleManager>().StartBattle();
         }
     }
 }

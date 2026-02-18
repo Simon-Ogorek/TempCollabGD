@@ -52,6 +52,7 @@ public class BattleManager : MonoBehaviour
 
     public void StartBattle()
     {
+        if(state == BattleState.Inactive){
         state = BattleState.Active;
 
         // This can be done more efficiently later and not be poo poo TODO
@@ -75,6 +76,8 @@ public class BattleManager : MonoBehaviour
 
         combatantList.Add(playerMovement.transform);
 
+        Debug.LogWarning(combatantList.Count);
+
         Vector3 centerOfArena = DetermineCenterOfBattle(combatantList);
 
         float arenaRadius = Vector3.Distance(centerOfArena, playerMovement.transform.position);
@@ -91,7 +94,7 @@ public class BattleManager : MonoBehaviour
 
         
 
-        
+        }
     }
 
     public void EndBattle()
