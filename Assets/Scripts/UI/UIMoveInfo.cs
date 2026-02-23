@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,7 @@ public class UIMoveInfo : MonoBehaviour
         {
             GameObject tempUI = Instantiate(template);
             TMP_Text text = tempUI.GetComponentInChildren<TMP_Text>();
-            text.text = move.GetDefinition().name;
+                text.text = move.GetData().moveName;
 
             mapUIToMove.Add(tempUI, move);
             listOfMoveUIs.Add(tempUI);
@@ -55,7 +56,7 @@ public class UIMoveInfo : MonoBehaviour
 
         if (listOfMoveUIs.Count < 5)
         {
-            Debug.LogError("The UI dosent support less than 5 moves for the move cycler element");
+            throw new Exception("The UI currently dosent support less than 5 moves for the move cycler element");
         }
 
         foreach (GameObject ui in listOfMoveUIs)
@@ -151,5 +152,10 @@ public class UIMoveInfo : MonoBehaviour
     int NegativeAccess(int value)
     {
         return ((value % listOfMoveUIs.Count) + listOfMoveUIs.Count) % listOfMoveUIs.Count;
+    }
+
+    public void DoSelectedMove()
+    {
+        mapUIToMove[listOfMoveUIs[(moveIndex+2)%listOfMoveUIs.Count]].DoMove();
     }
 }

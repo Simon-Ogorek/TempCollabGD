@@ -59,8 +59,23 @@ public class UIController : MonoBehaviour
             {
                 MovePanel.ChangeMove(false);
             }
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                MovePanel.DoSelectedMove();
+            }
 
-            PlayerPanel.SoftUpdatePlayerInfo(playerCombatant);
+            
+            foreach (Combatant entity in GameObject.FindObjectsByType<Combatant>(FindObjectsSortMode.None))
+            {
+                if (!entity.uiOutOfSync)
+                    continue;
+                
+                if (!entity.isEnemy)
+                    PlayerPanel.SoftUpdatePlayerInfo(playerCombatant);
+                else
+                    EnemyPanel.UpdateEnemyInfo(entity);
+                
+            }
         }
     }
 

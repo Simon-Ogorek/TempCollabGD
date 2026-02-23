@@ -349,7 +349,7 @@ MonoBehaviour:
   m_ShadowVariant: 0
   m_ShadowPrecision: 0
   useOldInspector: 0
-  useVolumetric: 1
+  useVolumetric: 0
   featuresFoldout: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
@@ -772,12 +772,16 @@ MonoBehaviour:
   <maxHealth>k__BackingField: 5
   <mana>k__BackingField: 5
   <maxMana>k__BackingField: 5
-  <portrait>k__BackingField: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+  <level>k__BackingField: 5
+  <experience>k__BackingField: 5
   <displayName>k__BackingField: DinoV3
+  <portrait>k__BackingField: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
   player: {fileID: 1766572878}
   isEnemy: 1
   partyManager: {fileID: 0}
   battleManager: {fileID: 1911794123}
+  target: {fileID: 0}
+  uiOutOfSync: 0
   awarenessRange: 5
 --- !u!135 &411407154
 SphereCollider:
@@ -1240,12 +1244,16 @@ MonoBehaviour:
   <maxHealth>k__BackingField: 5
   <mana>k__BackingField: 5
   <maxMana>k__BackingField: 5
-  <portrait>k__BackingField: {fileID: 2800000, guid: 5e842b76648934446aebb64070374cd9, type: 3}
+  <level>k__BackingField: 5
+  <experience>k__BackingField: 5
   <displayName>k__BackingField: DinoV2
+  <portrait>k__BackingField: {fileID: 2800000, guid: 5e842b76648934446aebb64070374cd9, type: 3}
   player: {fileID: 1766572878}
   isEnemy: 1
   partyManager: {fileID: 0}
   battleManager: {fileID: 1911794123}
+  target: {fileID: 0}
+  uiOutOfSync: 0
   awarenessRange: 5
 --- !u!1 &648253218
 GameObject:
@@ -1566,12 +1574,16 @@ MonoBehaviour:
   <maxHealth>k__BackingField: 5
   <mana>k__BackingField: 5
   <maxMana>k__BackingField: 5
-  <portrait>k__BackingField: {fileID: 0}
+  <level>k__BackingField: 5
+  <experience>k__BackingField: 5
   <displayName>k__BackingField: 
+  <portrait>k__BackingField: {fileID: 0}
   player: {fileID: 0}
   isEnemy: 0
   partyManager: {fileID: 306031098}
   battleManager: {fileID: 0}
+  target: {fileID: 0}
+  uiOutOfSync: 0
 --- !u!1 &700915847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2072,7 @@ Terrain:
   m_SplatMapDistance: 1000
   m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 0
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
@@ -2077,7 +2089,7 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
+  m_EnableHeightmapRayTracing: 0
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
 --- !u!4 &1041301195
@@ -2539,12 +2551,12 @@ GameObject:
   - component: {fileID: 1766572879}
   - component: {fileID: 1766572881}
   - component: {fileID: 1766572882}
+  - component: {fileID: 1766572888}
+  - component: {fileID: 1766572887}
   - component: {fileID: 1766572886}
   - component: {fileID: 1766572885}
   - component: {fileID: 1766572884}
   - component: {fileID: 1766572883}
-  - component: {fileID: 1766572887}
-  - component: {fileID: 1766572888}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2707,16 +2719,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69db0d83782dd774abb80d36ad4791f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBattle
-  <health>k__BackingField: 5
+  <health>k__BackingField: 2
   <maxHealth>k__BackingField: 5
   <mana>k__BackingField: 5
   <maxMana>k__BackingField: 5
-  <portrait>k__BackingField: {fileID: 2800000, guid: 4ecb2ad088b57924f9f7398485fa1a77, type: 3}
+  <level>k__BackingField: 5
+  <experience>k__BackingField: 5
   <displayName>k__BackingField: 
+  <portrait>k__BackingField: {fileID: 2800000, guid: 4ecb2ad088b57924f9f7398485fa1a77, type: 3}
   player: {fileID: 0}
   isEnemy: 0
   partyManager: {fileID: 306031098}
   battleManager: {fileID: 0}
+  target: {fileID: 544020733}
+  uiOutOfSync: 0
 --- !u!114 &1766572882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2741,10 +2757,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 0
+  data: {fileID: 11400000, guid: 3438d0430121f0546b8e82ed593c4155, type: 2}
 --- !u!114 &1766572884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2754,10 +2770,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 1
+  data: {fileID: 11400000, guid: 3438d0430121f0546b8e82ed593c4155, type: 2}
 --- !u!114 &1766572885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,10 +2783,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 1
+  data: {fileID: 11400000, guid: 3438d0430121f0546b8e82ed593c4155, type: 2}
 --- !u!114 &1766572886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,10 +2796,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 0
+  data: {fileID: 11400000, guid: 3438d0430121f0546b8e82ed593c4155, type: 2}
 --- !u!114 &1766572887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2793,10 +2809,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 0
+  data: {fileID: 11400000, guid: 3438d0430121f0546b8e82ed593c4155, type: 2}
 --- !u!114 &1766572888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,10 +2822,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766572873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd266ce13e3b8ff4986341e15944ead5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97319d66079a7424886b7d1f594f6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  selectedMove: 1
+  data: {fileID: 11400000, guid: 94fd20479f0eedd448dc998810d635c3, type: 2}
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,12 +2940,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 2
+  antialiasing: 3
   SMAAQuality: 2
   dithering: 1
   stopNaNs: 0
   taaSharpenStrength: 0.5
-  TAAQuality: 1
+  TAAQuality: 0
   taaSharpenMode: 0
   taaRingingReduction: 0
   taaHistorySharpening: 0.35
@@ -3275,7 +3291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1911794125}
-  - component: {fileID: 1911794124}
+  - component: {fileID: 1911794127}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -3283,24 +3299,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1911794124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911794123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d12a5bbcdda314f84df69998a96376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  arenaRadiusSize: 10
-  enemyAttentionRadius: 20
-  minArenaRadius: 2
-  arenaRadiusExpansionRelativeToPlayer: 5
-  playerMovement: {fileID: 1766572880}
-  arenaVisualPrefab: {fileID: 2074831787795924776, guid: 7853295e7eb5c1e49a63591960f58e21, type: 3}
 --- !u!4 &1911794125
 Transform:
   m_ObjectHideFlags: 0
@@ -3316,6 +3314,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911794127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911794123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fd7739a11d65b4d86de8c8de51f8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleManager
+  arenaRadiusSize: 10
+  enemyAttentionRadius: 20
+  minArenaRadius: 20
+  arenaRadiusExpansionRelativeToPlayer: 10
+  playerMovement: {fileID: 1766572880}
+  arenaVisualPrefab: {fileID: 2074831787795924776, guid: 7853295e7eb5c1e49a63591960f58e21, type: 3}
 --- !u!1 &1927989341
 GameObject:
   m_ObjectHideFlags: 0

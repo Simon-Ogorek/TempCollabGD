@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -6,7 +8,7 @@ using UnityEngine;
 public class Combatant : MonoBehaviour
 {
     [field: SerializeField]
-    public float health { get; private set; } = 5f;
+    public float health { get; protected set; } = 5f;
     [field: SerializeField]
     public float maxHealth { get; private set; } = 5f;
 
@@ -15,9 +17,16 @@ public class Combatant : MonoBehaviour
     [field: SerializeField]
     public float maxMana { get; private set; } = 5f;
     [field: SerializeField]
-    public Texture2D portrait { get; private set; }
+    public float level { get; private set; } = 5f;
+    [field: SerializeField]
+    public float experience { get; private set; } = 5f;
+    
     [field: SerializeField]
     public string displayName { get; private set; }
+
+    [field: SerializeField]
+    public Texture2D portrait { get; private set; }
+
 
     [SerializeField]
     protected Transform player;
@@ -27,12 +36,11 @@ public class Combatant : MonoBehaviour
     protected GameObject partyManager;
     [SerializeField]
     protected GameObject battleManager;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Combatant target;
+    public bool uiOutOfSync = false;
+    public bool canDoActions { get; private set; } = false;
+    public bool doingAction { get; private set; } = false;
+    public bool canCancelAction { get; private set; } = false;
 
     //Player is controlling the selected
     public void SwitchOn()
@@ -51,10 +59,19 @@ public class Combatant : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Die()
     {
+        
     }
 
-    
+    public void ChangeHealth(float value)
+    {
+        health = Math.Clamp(health + value, 0, maxHealth);
+        uiOutOfSync = true;
+    }
+    public void ChangeMana(float value)
+    {
+        mana = Math.Clamp(mana + value, 0, maxMana);
+        uiOutOfSync = true;
+    }
 }
