@@ -41,8 +41,9 @@ public class Move : MonoBehaviour
                 if (data.manaChange != 0)
                     caster.ChangeMana(data.manaChange);
             }
-            
         }
+
+        UIController.Instance.startCooldownTimer(data.cooldown);
     }
 
 }

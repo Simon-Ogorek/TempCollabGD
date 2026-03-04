@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 /// <summary>
 /// Controls all in-game aspects about the UI
@@ -104,5 +105,10 @@ public class UIController : MonoBehaviour
         {
             EnemyPanel.AddEnemyInfo(combatant);
         }
+    }
+
+    public void startCooldownTimer(float timer)
+    {
+        MovePanel.startCooldownTimerMoves(timer);
     }
 }

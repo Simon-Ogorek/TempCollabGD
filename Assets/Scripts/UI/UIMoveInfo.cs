@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
-using Unity.IntegerTime;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMoveInfo : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class UIMoveInfo : MonoBehaviour
     Coroutine transformerNext;
     Coroutine transformerNextNext;
     int activeTransformers;
-
+    float cooldownTimer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -157,5 +158,34 @@ public class UIMoveInfo : MonoBehaviour
     public void DoSelectedMove()
     {
         mapUIToMove[listOfMoveUIs[(moveIndex+2)%listOfMoveUIs.Count]].DoMove();
+    }
+
+    public void startCooldownTimerMoves(float timer)
+    {
+        if (timer <= 0 )
+        {
+            Debug.LogWarning("Nonsense timer set: " + timer);
+        }
+        cooldownTimer = timer;
+
+        foreach (GameObject moveUIs in listOfMoveUIs)
+        {
+            moveUIs.GetComponentInChildren<UnityEngine.UI.Image>().color = new Color(0.7f,0.7f,0.7f,1f);
+        }
+        StartCoroutine(endCooldown());
+    }   
+
+    IEnumerator endCooldown()
+    {
+        while (cooldownTimer >= 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        foreach (GameObject moveUIs in listOfMoveUIs)
+        {
+            moveUIs.GetComponentInChildren<UnityEngine.UI.Image>().color = new Color(1f,1f,1f,1f);
+        }
     }
 }
