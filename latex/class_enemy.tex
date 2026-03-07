@@ -28,24 +28,55 @@ float {\bfseries awareness\+Range} = 5f
 void {\bfseries Switch\+On} ()
 \item 
 void {\bfseries Switch\+Off} ()
+\item 
+void {\bfseries Die} ()
+\item 
+void {\bfseries Change\+Health} (float value)
+\item 
+void {\bfseries Change\+Mana} (float value)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_combatant}{Combatant}}}
 \begin{DoxyCompactItemize}
 \item 
 bool {\bfseries is\+Enemy}
 \item 
-Game\+Object {\bfseries Enemy\+UIElement}
+\doxymbox{\hyperlink{class_combatant}{Combatant}} {\bfseries target}
+\item 
+bool {\bfseries ui\+Out\+Of\+Sync} = false
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_combatant}{Combatant}}}
 \begin{DoxyCompactItemize}
-\item 
-float {\bfseries Health} = 5f
 \item 
 Transform {\bfseries player}
 \item 
 Game\+Object {\bfseries party\+Manager}
 \item 
 Game\+Object {\bfseries battle\+Manager}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_combatant}{Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries health} = 5f\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\item 
+float {\bfseries max\+Health} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+float {\bfseries mana} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+float {\bfseries max\+Mana} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+float {\bfseries level} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+float {\bfseries experience} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+Texture2D {\bfseries portrait}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool {\bfseries can\+Do\+Actions} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool {\bfseries doing\+Action} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+bool {\bfseries can\+Cancel\+Action} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 
 

@@ -6,6 +6,16 @@ using System;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+
+    /// @brief to match direction character goes relative to camera
+    public enum Direction
+    {
+        Forward,
+        Backward,
+        Right,
+        Left
+    }
+
     [Header("Movement Values")]
 
     /// @brief How fast the player moves in X and Z
@@ -53,6 +63,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject cameraTrackingPoints;
 
+    /// @brief freeLookCamera that affects movement direction based on rotation.
+    [SerializeField]
+    private GameObject freeLookCamera;
+    
+    /// @brief player direction to adjust relative to camera.
+    private Direction playerDirection;
     /// @brief
     [SerializeField]
     private float cameraRotationX = 5;
@@ -63,6 +79,9 @@ public class PlayerMovement : MonoBehaviour
     {
         inputVector = Vector3.zero;
         controller = GetComponent<CharacterController>();
+        //for camera control
+        Cursor.lockState = CursorLockMode.Locked;
+        playerDirection = Direction.Forward;
     }
 
     void FixedUpdate()
@@ -74,24 +93,30 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            inputVector.z += 1;
+            matchRotation(Direction.Forward);
+            inputVector += transform.forward;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            inputVector.x -= 1;
+            matchRotation(Direction.Left);
+            inputVector += transform.forward;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            inputVector.z -= 1;
+            matchRotation(Direction.Backward);
+            inputVector += transform.forward;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            inputVector.x += 1;
+            matchRotation(Direction.Right);
+            inputVector += transform.forward;
         }
 
+        inputVector = Vector3.Normalize(inputVector);
+        
         velocityVector += inputVector * speed;
 
         Debug.DrawRay(transform.position, Vector3.down * transform.localScale.y * 1.1f, Color.green);
@@ -127,5 +152,21 @@ public class PlayerMovement : MonoBehaviour
         cameraTrackingPoints.transform.Rotate(new Vector3(-mouseX * cameraRotationX,0,0));
 
         */
+    }
+
+    public void matchRotation(Direction playerMotion)
+    {
+        Vector3 playerRotation = transform.eulerAngles;
+        Vector3 cameraRotation = freeLookCamera.transform.eulerAngles;
+        Vector3 newPlayerRotation = new Vector3(playerRotation.x, cameraRotation.y, cameraRotation.z);
+        if(playerMotion == Direction.Forward)
+            newPlayerRotation = new Vector3(playerRotation.x, cameraRotation.y, cameraRotation.z);
+        else if (playerMotion == Direction.Backward)
+            newPlayerRotation = new Vector3(playerRotation.x, cameraRotation.y + 180, cameraRotation.z);
+        else if (playerMotion == Direction.Right)
+            newPlayerRotation = new Vector3(playerRotation.x, cameraRotation.y + 90, cameraRotation.z);    
+        else if (playerMotion == Direction.Left)
+            newPlayerRotation = new Vector3(playerRotation.x, cameraRotation.y - 90, cameraRotation.z);    
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(newPlayerRotation), Time.deltaTime * 5);
     }
 }

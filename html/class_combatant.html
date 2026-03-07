@@ -112,18 +112,24 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight"><b>SwitchOn</b> ()</td></tr>
 <tr class="memitem:a6c2efcfec846fe9b2d2171fb008b821d" id="r_a6c2efcfec846fe9b2d2171fb008b821d"><td class="memItemLeft"><a id="a6c2efcfec846fe9b2d2171fb008b821d" name="a6c2efcfec846fe9b2d2171fb008b821d"></a>
 void&#160;</td><td class="memItemRight"><b>SwitchOff</b> ()</td></tr>
+<tr class="memitem:a4589f427099f5561cb1ec978a5c50744" id="r_a4589f427099f5561cb1ec978a5c50744"><td class="memItemLeft"><a id="a4589f427099f5561cb1ec978a5c50744" name="a4589f427099f5561cb1ec978a5c50744"></a>
+void&#160;</td><td class="memItemRight"><b>Die</b> ()</td></tr>
+<tr class="memitem:a4eac16b504f27aa95955aeeb23f293f5" id="r_a4eac16b504f27aa95955aeeb23f293f5"><td class="memItemLeft"><a id="a4eac16b504f27aa95955aeeb23f293f5" name="a4eac16b504f27aa95955aeeb23f293f5"></a>
+void&#160;</td><td class="memItemRight"><b>ChangeHealth</b> (float value)</td></tr>
+<tr class="memitem:a44fbab48f7278f2c7fdba9c418c74dd9" id="r_a44fbab48f7278f2c7fdba9c418c74dd9"><td class="memItemLeft"><a id="a44fbab48f7278f2c7fdba9c418c74dd9" name="a44fbab48f7278f2c7fdba9c418c74dd9"></a>
+void&#160;</td><td class="memItemRight"><b>ChangeMana</b> (float value)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2f5086e627b0ecb82b667164a14f71a0" id="r_a2f5086e627b0ecb82b667164a14f71a0"><td class="memItemLeft"><a id="a2f5086e627b0ecb82b667164a14f71a0" name="a2f5086e627b0ecb82b667164a14f71a0"></a>
 bool&#160;</td><td class="memItemRight"><b>isEnemy</b></td></tr>
-<tr class="memitem:ade6422df80b3ad54c8d3320d0ba4dd1e" id="r_ade6422df80b3ad54c8d3320d0ba4dd1e"><td class="memItemLeft"><a id="ade6422df80b3ad54c8d3320d0ba4dd1e" name="ade6422df80b3ad54c8d3320d0ba4dd1e"></a>
-GameObject&#160;</td><td class="memItemRight"><b>EnemyUIElement</b></td></tr>
+<tr class="memitem:aea4069352bfb89f635ba59d85a739684" id="r_aea4069352bfb89f635ba59d85a739684"><td class="memItemLeft"><a id="aea4069352bfb89f635ba59d85a739684" name="aea4069352bfb89f635ba59d85a739684"></a>
+<a class="el" href="class_combatant.html">Combatant</a>&#160;</td><td class="memItemRight"><b>target</b></td></tr>
+<tr class="memitem:af3e9c73677db9a8a586a2b4296b848f5" id="r_af3e9c73677db9a8a586a2b4296b848f5"><td class="memItemLeft"><a id="af3e9c73677db9a8a586a2b4296b848f5" name="af3e9c73677db9a8a586a2b4296b848f5"></a>
+bool&#160;</td><td class="memItemRight"><b>uiOutOfSync</b> = false</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a560385c84917d9548c734e5c44a53590" id="r_a560385c84917d9548c734e5c44a53590"><td class="memItemLeft"><a id="a560385c84917d9548c734e5c44a53590" name="a560385c84917d9548c734e5c44a53590"></a>
-float&#160;</td><td class="memItemRight"><b>Health</b> = 5f</td></tr>
 <tr class="memitem:a3d942c0d21279bd7d8e5d2e92e9f0523" id="r_a3d942c0d21279bd7d8e5d2e92e9f0523"><td class="memItemLeft"><a id="a3d942c0d21279bd7d8e5d2e92e9f0523" name="a3d942c0d21279bd7d8e5d2e92e9f0523"></a>
 Transform&#160;</td><td class="memItemRight"><b>player</b></td></tr>
 <tr class="memitem:a759a3105daf471f2aba979bd4e58f942" id="r_a759a3105daf471f2aba979bd4e58f942"><td class="memItemLeft"><a id="a759a3105daf471f2aba979bd4e58f942" name="a759a3105daf471f2aba979bd4e58f942"></a>
@@ -131,12 +137,30 @@ GameObject&#160;</td><td class="memItemRight"><b>partyManager</b></td></tr>
 <tr class="memitem:ac19a0347a517a74722e6124db2baeeaa" id="r_ac19a0347a517a74722e6124db2baeeaa"><td class="memItemLeft"><a id="ac19a0347a517a74722e6124db2baeeaa" name="ac19a0347a517a74722e6124db2baeeaa"></a>
 GameObject&#160;</td><td class="memItemRight"><b>battleManager</b></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a90bd4eddb86302b1f7a32c233090d6ee" id="r_a90bd4eddb86302b1f7a32c233090d6ee"><td class="memItemLeft"><a id="a90bd4eddb86302b1f7a32c233090d6ee" name="a90bd4eddb86302b1f7a32c233090d6ee"></a>
-void&#160;</td><td class="memItemRight"><b>Start</b> ()</td></tr>
-<tr class="memitem:a054e4a3e57c25a00b5d2eae2c6c50cee" id="r_a054e4a3e57c25a00b5d2eae2c6c50cee"><td class="memItemLeft"><a id="a054e4a3e57c25a00b5d2eae2c6c50cee" name="a054e4a3e57c25a00b5d2eae2c6c50cee"></a>
-void&#160;</td><td class="memItemRight"><b>Update</b> ()</td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a7e0f429fbf43a4497e1fbaca27ec3dd1" id="r_a7e0f429fbf43a4497e1fbaca27ec3dd1"><td class="memItemLeft"><a id="a7e0f429fbf43a4497e1fbaca27ec3dd1" name="a7e0f429fbf43a4497e1fbaca27ec3dd1"></a>
+float&#160;</td><td class="memItemRight"><b>health</b> = 5f<code> [get, protected set]</code></td></tr>
+<tr class="memitem:aa468f2c7d8424dfb4255c4944bd9df03" id="r_aa468f2c7d8424dfb4255c4944bd9df03"><td class="memItemLeft"><a id="aa468f2c7d8424dfb4255c4944bd9df03" name="aa468f2c7d8424dfb4255c4944bd9df03"></a>
+float&#160;</td><td class="memItemRight"><b>maxHealth</b> = 5f<code> [get, private set]</code></td></tr>
+<tr class="memitem:a2d75fcc632a8f337ab0bf874e4214c19" id="r_a2d75fcc632a8f337ab0bf874e4214c19"><td class="memItemLeft"><a id="a2d75fcc632a8f337ab0bf874e4214c19" name="a2d75fcc632a8f337ab0bf874e4214c19"></a>
+float&#160;</td><td class="memItemRight"><b>mana</b> = 5f<code> [get, private set]</code></td></tr>
+<tr class="memitem:ac1931bc0d65ff07377406b0e380d5236" id="r_ac1931bc0d65ff07377406b0e380d5236"><td class="memItemLeft"><a id="ac1931bc0d65ff07377406b0e380d5236" name="ac1931bc0d65ff07377406b0e380d5236"></a>
+float&#160;</td><td class="memItemRight"><b>maxMana</b> = 5f<code> [get, private set]</code></td></tr>
+<tr class="memitem:a341a44329850b2961bf1fed93611686c" id="r_a341a44329850b2961bf1fed93611686c"><td class="memItemLeft"><a id="a341a44329850b2961bf1fed93611686c" name="a341a44329850b2961bf1fed93611686c"></a>
+float&#160;</td><td class="memItemRight"><b>level</b> = 5f<code> [get, private set]</code></td></tr>
+<tr class="memitem:a0825fa0363c1c04422f39d22c86c30ef" id="r_a0825fa0363c1c04422f39d22c86c30ef"><td class="memItemLeft"><a id="a0825fa0363c1c04422f39d22c86c30ef" name="a0825fa0363c1c04422f39d22c86c30ef"></a>
+float&#160;</td><td class="memItemRight"><b>experience</b> = 5f<code> [get, private set]</code></td></tr>
+<tr class="memitem:a3577a33fda3f1c25e328d718432536cd" id="r_a3577a33fda3f1c25e328d718432536cd"><td class="memItemLeft"><a id="a3577a33fda3f1c25e328d718432536cd" name="a3577a33fda3f1c25e328d718432536cd"></a>
+string&#160;</td><td class="memItemRight"><b>displayName</b><code> [get, private set]</code></td></tr>
+<tr class="memitem:a49fcf8cd7c4bb94c2fe1c64834b8c32d" id="r_a49fcf8cd7c4bb94c2fe1c64834b8c32d"><td class="memItemLeft"><a id="a49fcf8cd7c4bb94c2fe1c64834b8c32d" name="a49fcf8cd7c4bb94c2fe1c64834b8c32d"></a>
+Texture2D&#160;</td><td class="memItemRight"><b>portrait</b><code> [get, private set]</code></td></tr>
+<tr class="memitem:ae61d24912de1ecc5ce4b6d6af758076f" id="r_ae61d24912de1ecc5ce4b6d6af758076f"><td class="memItemLeft"><a id="ae61d24912de1ecc5ce4b6d6af758076f" name="ae61d24912de1ecc5ce4b6d6af758076f"></a>
+bool&#160;</td><td class="memItemRight"><b>canDoActions</b> = false<code> [get, private set]</code></td></tr>
+<tr class="memitem:a607f9f5a7a90390f3c8dcffa59f316e0" id="r_a607f9f5a7a90390f3c8dcffa59f316e0"><td class="memItemLeft"><a id="a607f9f5a7a90390f3c8dcffa59f316e0" name="a607f9f5a7a90390f3c8dcffa59f316e0"></a>
+bool&#160;</td><td class="memItemRight"><b>doingAction</b> = false<code> [get, private set]</code></td></tr>
+<tr class="memitem:a8a69bf745e61381b2b85cd8483c372fd" id="r_a8a69bf745e61381b2b85cd8483c372fd"><td class="memItemLeft"><a id="a8a69bf745e61381b2b85cd8483c372fd" name="a8a69bf745e61381b2b85cd8483c372fd"></a>
+bool&#160;</td><td class="memItemRight"><b>canCancelAction</b> = false<code> [get, private set]</code></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Any given entity that can enter combat is a combatant. </p>

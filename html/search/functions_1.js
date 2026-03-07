@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getdefinition_0',['GetDefinition',['../class_move.html#aea56372629b97eac9554cbfd682b2601',1,'Move']]]
+  ['getdata_0',['GetData',['../class_move.html#a64314d2642758d29fa4bae33a0ccbb51',1,'Move']]]
 ];

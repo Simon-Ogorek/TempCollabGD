@@ -17,6 +17,7 @@ Inheritance diagram for UIController:\+\begin{figure}[H]
 \Hypertarget{class_u_i_controller_a8f9cf3209ebb860e5cf78b4138733661}\label{class_u_i_controller_a8f9cf3209ebb860e5cf78b4138733661} 
 enum {\bfseries UIState} \{ {\bfseries Exploring}
 , {\bfseries Battle}
+, {\bfseries Battle\+\_\+\+Selecting\+\_\+\+Target}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
@@ -27,6 +28,15 @@ void {\bfseries Set\+State} (UIState new\+State)
 \item 
 \Hypertarget{class_u_i_controller_ad3cbcd5a58cafdd5e4342c216ecb239a}\label{class_u_i_controller_ad3cbcd5a58cafdd5e4342c216ecb239a} 
 void {\bfseries Add\+To\+Enemy\+Panel} (\doxymbox{\hyperlink{class_combatant}{Combatant}} combatant)
+\item 
+\Hypertarget{class_u_i_controller_aac9d5070cac63ae2f9a2208b0cca1b92}\label{class_u_i_controller_aac9d5070cac63ae2f9a2208b0cca1b92} 
+void {\bfseries start\+Cooldown\+Timer} (float timer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_controller_a866e7bc527dc07be788c71248b5f89e2}\label{class_u_i_controller_a866e7bc527dc07be788c71248b5f89e2} 
+\doxymbox{\hyperlink{class_combatant}{Combatant}} {\bfseries player\+Combatant}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -42,6 +52,9 @@ void {\bfseries Awake} ()
 \item 
 \Hypertarget{class_u_i_controller_a676b3b972c33885db4565ee43f23e459}\label{class_u_i_controller_a676b3b972c33885db4565ee43f23e459} 
 void {\bfseries Start} ()
+\item 
+\Hypertarget{class_u_i_controller_adc5b0854a26bbcd71cc33274960bd0a9}\label{class_u_i_controller_adc5b0854a26bbcd71cc33274960bd0a9} 
+void {\bfseries Update} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
