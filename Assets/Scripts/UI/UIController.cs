@@ -70,7 +70,7 @@ public class UIController : MonoBehaviour
                 MovePanel.ChangeMove(false);
             }
 
-            if (current_state == UIState.Battle && Input.GetKeyDown(KeyCode.Return) )
+            if ((current_state == UIState.Battle && Input.GetKeyDown(KeyCode.Return)) || (current_state == UIState.Battle && Gamepad.current.rightTrigger.wasPressedThisFrame))
             {
                 Time.timeScale = 0.02f;
                 Time.fixedDeltaTime = 0.02f * Time.timeScale;
@@ -135,5 +135,10 @@ public class UIController : MonoBehaviour
     {
         DialogueUI.SetActive(true);
         DialogueBox.SetDialogue(dialogue);
+    }
+
+    public void EndDialogue()
+    {
+        DialogueUI.SetActive(false);
     }
 }

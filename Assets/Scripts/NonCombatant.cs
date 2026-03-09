@@ -1,5 +1,6 @@
 using System;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 /// <summary>
@@ -8,33 +9,47 @@ using UnityEngine;
 public class NonCombatant : MonoBehaviour
 {
 
-
+//Array with all of the dialogue of the NPC
     [SerializeField]
-    protected Transform player;
+    protected string[] dialogue;
 
-    protected string[] dialogue = {"Hello there", "How do you do"};
-
-    int test = 0; 
+    int i = 0;
+    bool inDialogue = false;
 
     void Start()
     {
         
     }
+
+//Goes through dialogue array
     void Update()
     {
-
-    }
-
-    public void GiveDialogue()
-    {
-        int i = 0;
-        while(i < dialogue.Length)
+        if(inDialogue)
         {
-            UIController.Instance.OpenDialogue(dialogue[i]);
-            if(Input.GetKeyDown(KeyCode.I))
+        if(i < dialogue.Length)
+        {
+            if(Input.GetKeyDown(KeyCode.I) || Gamepad.current.buttonEast.wasPressedThisFrame)
             {
                 i+=1;
+                if(i<=dialogue.Length-1)
+                    UIController.Instance.OpenDialogue(dialogue[i]);
+            }
+
+            
+        }
+        else
+            {
+                inDialogue = false;
+                UIController.Instance.EndDialogue();
             }
         }
+    }
+
+//Starts a dialogue action from UI Controller
+    public void GiveDialogue()
+    {
+        i = 0;
+        UIController.Instance.OpenDialogue(dialogue[i]);
+        inDialogue = true;
     }
 }
