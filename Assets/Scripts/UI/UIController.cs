@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Controls all in-game aspects about the UI
@@ -22,7 +24,8 @@ public class UIController : MonoBehaviour
     private GameObject AdventureUI;
     [SerializeField]
     private GameObject BattleUI;
-
+    [SerializeField]
+    private GameObject DialogueUI;
 
     [Header("Battle UI Panels")]
     [SerializeField]
@@ -31,6 +34,9 @@ public class UIController : MonoBehaviour
     private UIPlayerInfo PlayerPanel;
     [SerializeField]
     private UIMoveInfo MovePanel;
+    
+    [SerializeField]
+    private UIDialogue DialogueBox;
 
 
     public static UIController Instance { get; private set; }
@@ -48,22 +54,23 @@ public class UIController : MonoBehaviour
     {
         AdventureUI.SetActive(true);
         BattleUI.SetActive(false);
+        DialogueUI.SetActive(false);
     }
 
     void Update()
     {
         if (current_state == UIState.Battle)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Gamepad.current.rightShoulder.wasPressedThisFrame)
             {
                 MovePanel.ChangeMove(true);
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Gamepad.current.leftShoulder.wasPressedThisFrame)
             {
                 MovePanel.ChangeMove(false);
             }
 
-            if (current_state == UIState.Battle && Input.GetKeyDown(KeyCode.Return) )
+            if ((current_state == UIState.Battle && Input.GetKeyDown(KeyCode.Return)) || (current_state == UIState.Battle && Gamepad.current.rightTrigger.wasPressedThisFrame))
             {
                 Time.timeScale = 0.02f;
                 Time.fixedDeltaTime = 0.02f * Time.timeScale;
@@ -122,5 +129,16 @@ public class UIController : MonoBehaviour
     public void startCooldownTimer(float timer)
     {
         MovePanel.startCooldownTimerMoves(timer);
+    }
+
+    public void OpenDialogue(string dialogue)
+    {
+        DialogueUI.SetActive(true);
+        DialogueBox.SetDialogue(dialogue);
+    }
+
+    public void EndDialogue()
+    {
+        DialogueUI.SetActive(false);
     }
 }

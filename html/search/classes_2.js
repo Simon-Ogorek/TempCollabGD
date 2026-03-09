@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['eidosbattle_0',['EidosBattle',['../class_eidos_battle.html',1,'']]],
-  ['enemy_1',['Enemy',['../class_enemy.html',1,'']]]
+  ['damageeffect_0',['DamageEffect',['../class_damage_effect.html',1,'']]],
+  ['dorandomshit_1',['DoRandomShit',['../class_do_random_shit.html',1,'']]]
 ];

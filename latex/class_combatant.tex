@@ -19,6 +19,15 @@ void {\bfseries Switch\+On} ()
 \item 
 \Hypertarget{class_combatant_a6c2efcfec846fe9b2d2171fb008b821d}\label{class_combatant_a6c2efcfec846fe9b2d2171fb008b821d} 
 void {\bfseries Switch\+Off} ()
+\item 
+\Hypertarget{class_combatant_a4589f427099f5561cb1ec978a5c50744}\label{class_combatant_a4589f427099f5561cb1ec978a5c50744} 
+void {\bfseries Die} ()
+\item 
+\Hypertarget{class_combatant_a4eac16b504f27aa95955aeeb23f293f5}\label{class_combatant_a4eac16b504f27aa95955aeeb23f293f5} 
+void {\bfseries Change\+Health} (float value)
+\item 
+\Hypertarget{class_combatant_a44fbab48f7278f2c7fdba9c418c74dd9}\label{class_combatant_a44fbab48f7278f2c7fdba9c418c74dd9} 
+void {\bfseries Change\+Mana} (float value)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -26,14 +35,14 @@ void {\bfseries Switch\+Off} ()
 \Hypertarget{class_combatant_a2f5086e627b0ecb82b667164a14f71a0}\label{class_combatant_a2f5086e627b0ecb82b667164a14f71a0} 
 bool {\bfseries is\+Enemy}
 \item 
-\Hypertarget{class_combatant_ade6422df80b3ad54c8d3320d0ba4dd1e}\label{class_combatant_ade6422df80b3ad54c8d3320d0ba4dd1e} 
-Game\+Object {\bfseries Enemy\+UIElement}
+\Hypertarget{class_combatant_aea4069352bfb89f635ba59d85a739684}\label{class_combatant_aea4069352bfb89f635ba59d85a739684} 
+\doxymbox{\hyperlink{class_combatant}{Combatant}} {\bfseries target}
+\item 
+\Hypertarget{class_combatant_af3e9c73677db9a8a586a2b4296b848f5}\label{class_combatant_af3e9c73677db9a8a586a2b4296b848f5} 
+bool {\bfseries ui\+Out\+Of\+Sync} = false
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_combatant_a560385c84917d9548c734e5c44a53590}\label{class_combatant_a560385c84917d9548c734e5c44a53590} 
-float {\bfseries Health} = 5f
 \item 
 \Hypertarget{class_combatant_a3d942c0d21279bd7d8e5d2e92e9f0523}\label{class_combatant_a3d942c0d21279bd7d8e5d2e92e9f0523} 
 Transform {\bfseries player}
@@ -44,14 +53,41 @@ Game\+Object {\bfseries party\+Manager}
 \Hypertarget{class_combatant_ac19a0347a517a74722e6124db2baeeaa}\label{class_combatant_ac19a0347a517a74722e6124db2baeeaa} 
 Game\+Object {\bfseries battle\+Manager}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Private Member Functions}
+\doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_combatant_a90bd4eddb86302b1f7a32c233090d6ee}\label{class_combatant_a90bd4eddb86302b1f7a32c233090d6ee} 
-void {\bfseries Start} ()
+\Hypertarget{class_combatant_a7e0f429fbf43a4497e1fbaca27ec3dd1}\label{class_combatant_a7e0f429fbf43a4497e1fbaca27ec3dd1} 
+float {\bfseries health} = 5f\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
 \item 
-\Hypertarget{class_combatant_a054e4a3e57c25a00b5d2eae2c6c50cee}\label{class_combatant_a054e4a3e57c25a00b5d2eae2c6c50cee} 
-void {\bfseries Update} ()
+\Hypertarget{class_combatant_aa468f2c7d8424dfb4255c4944bd9df03}\label{class_combatant_aa468f2c7d8424dfb4255c4944bd9df03} 
+float {\bfseries max\+Health} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a2d75fcc632a8f337ab0bf874e4214c19}\label{class_combatant_a2d75fcc632a8f337ab0bf874e4214c19} 
+float {\bfseries mana} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_ac1931bc0d65ff07377406b0e380d5236}\label{class_combatant_ac1931bc0d65ff07377406b0e380d5236} 
+float {\bfseries max\+Mana} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a341a44329850b2961bf1fed93611686c}\label{class_combatant_a341a44329850b2961bf1fed93611686c} 
+float {\bfseries level} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a0825fa0363c1c04422f39d22c86c30ef}\label{class_combatant_a0825fa0363c1c04422f39d22c86c30ef} 
+float {\bfseries experience} = 5f\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a3577a33fda3f1c25e328d718432536cd}\label{class_combatant_a3577a33fda3f1c25e328d718432536cd} 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a49fcf8cd7c4bb94c2fe1c64834b8c32d}\label{class_combatant_a49fcf8cd7c4bb94c2fe1c64834b8c32d} 
+Texture2D {\bfseries portrait}\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_ae61d24912de1ecc5ce4b6d6af758076f}\label{class_combatant_ae61d24912de1ecc5ce4b6d6af758076f} 
+bool {\bfseries can\+Do\+Actions} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a607f9f5a7a90390f3c8dcffa59f316e0}\label{class_combatant_a607f9f5a7a90390f3c8dcffa59f316e0} 
+bool {\bfseries doing\+Action} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
+\item 
+\Hypertarget{class_combatant_a8a69bf745e61381b2b85cd8483c372fd}\label{class_combatant_a8a69bf745e61381b2b85cd8483c372fd} 
+bool {\bfseries can\+Cancel\+Action} = false\hspace{0.3cm}{\ttfamily  \+[get, private set]\+}
 \end{DoxyCompactItemize}
 
 

@@ -6,14 +6,35 @@ Inheritance diagram for UIMove\+Info:\+\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_u_i_move_info}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_move_info_a94db60d34a3f95dc1e67a3b69f7199a0}\label{class_u_i_move_info_a94db60d34a3f95dc1e67a3b69f7199a0} 
+void {\bfseries Update\+Move\+Selection} (\doxymbox{\hyperlink{class_combatant}{Combatant}} combatant)
+\item 
+\Hypertarget{class_u_i_move_info_a1ea54b917e4901ed9ebdf168b2c5e6a2}\label{class_u_i_move_info_a1ea54b917e4901ed9ebdf168b2c5e6a2} 
+void {\bfseries Change\+Move} (bool decrement)
+\item 
+\Hypertarget{class_u_i_move_info_a1c18ef040e640554ce5760b1f46bdc1d}\label{class_u_i_move_info_a1c18ef040e640554ce5760b1f46bdc1d} 
+void {\bfseries Do\+Selected\+Move} ()
+\item 
+\Hypertarget{class_u_i_move_info_ae82b556dee2225a5b21486d0e89657b0}\label{class_u_i_move_info_ae82b556dee2225a5b21486d0e89657b0} 
+void {\bfseries start\+Cooldown\+Timer\+Moves} (float timer)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_u_i_move_info_ab274c7edeee344a9f10e93583353df36}\label{class_u_i_move_info_ab274c7edeee344a9f10e93583353df36} 
 void {\bfseries Start} ()
 \item 
-\Hypertarget{class_u_i_move_info_a94db60d34a3f95dc1e67a3b69f7199a0}\label{class_u_i_move_info_a94db60d34a3f95dc1e67a3b69f7199a0} 
-void {\bfseries Update\+Move\+Selection} (\doxymbox{\hyperlink{class_combatant}{Combatant}} combatant)
+\Hypertarget{class_u_i_move_info_a2d6b4d190c0bf658a85cb0fcc9607037}\label{class_u_i_move_info_a2d6b4d190c0bf658a85cb0fcc9607037} 
+IEnumerator {\bfseries Transformer} (Game\+Object obj)
+\item 
+\Hypertarget{class_u_i_move_info_abb823b2d7036f15ea12da21898abde97}\label{class_u_i_move_info_abb823b2d7036f15ea12da21898abde97} 
+int {\bfseries Negative\+Access} (int value)
+\item 
+\Hypertarget{class_u_i_move_info_a7bfb6a85f177d748b605356e2813bd07}\label{class_u_i_move_info_a7bfb6a85f177d748b605356e2813bd07} 
+IEnumerator {\bfseries end\+Cooldown} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -26,6 +47,45 @@ Dictionary$<$ Game\+Object, \doxymbox{\hyperlink{class_move}{Move}} $>$ {\bfseri
 \item 
 \Hypertarget{class_u_i_move_info_ab8bb42ef36e38f960a75f0d4c2860412}\label{class_u_i_move_info_ab8bb42ef36e38f960a75f0d4c2860412} 
 Game\+Object {\bfseries template}
+\item 
+\Hypertarget{class_u_i_move_info_a1646967198a5cf0688be475960ba8118}\label{class_u_i_move_info_a1646967198a5cf0688be475960ba8118} 
+Transform {\bfseries off\+Screen\+Previous}
+\item 
+\Hypertarget{class_u_i_move_info_a72b840bd6a85350174431da0f4626ee7}\label{class_u_i_move_info_a72b840bd6a85350174431da0f4626ee7} 
+Transform {\bfseries previous}
+\item 
+\Hypertarget{class_u_i_move_info_abe6b9eaf95292b1a04bdec88190fa1ac}\label{class_u_i_move_info_abe6b9eaf95292b1a04bdec88190fa1ac} 
+Transform {\bfseries selected}
+\item 
+\Hypertarget{class_u_i_move_info_a04b31714175f4c52b52ddab42a26dfc6}\label{class_u_i_move_info_a04b31714175f4c52b52ddab42a26dfc6} 
+Transform {\bfseries next}
+\item 
+\Hypertarget{class_u_i_move_info_af58bd638087d443bb1fd662f790302c0}\label{class_u_i_move_info_af58bd638087d443bb1fd662f790302c0} 
+Transform {\bfseries off\+Screen\+Next}
+\item 
+\Hypertarget{class_u_i_move_info_a792827eb5c44464ae9aa35961d1d1699}\label{class_u_i_move_info_a792827eb5c44464ae9aa35961d1d1699} 
+int {\bfseries move\+Index} = 0
+\item 
+\Hypertarget{class_u_i_move_info_afebf497b6f4a6eb1ce2529984c50000e}\label{class_u_i_move_info_afebf497b6f4a6eb1ce2529984c50000e} 
+Coroutine {\bfseries transformer\+Prev\+Prev}
+\item 
+\Hypertarget{class_u_i_move_info_a76efd4d32790c7cff39d975a19115d1c}\label{class_u_i_move_info_a76efd4d32790c7cff39d975a19115d1c} 
+Coroutine {\bfseries transformer\+Prev}
+\item 
+\Hypertarget{class_u_i_move_info_a8a55cf7a53963242bfa704e2378366c0}\label{class_u_i_move_info_a8a55cf7a53963242bfa704e2378366c0} 
+Coroutine {\bfseries transformer\+Current}
+\item 
+\Hypertarget{class_u_i_move_info_a90bda2a93a1386e0300ca95514e9e8c5}\label{class_u_i_move_info_a90bda2a93a1386e0300ca95514e9e8c5} 
+Coroutine {\bfseries transformer\+Next}
+\item 
+\Hypertarget{class_u_i_move_info_ab6abe5133957277d4ca30855aa29d501}\label{class_u_i_move_info_ab6abe5133957277d4ca30855aa29d501} 
+Coroutine {\bfseries transformer\+Next\+Next}
+\item 
+\Hypertarget{class_u_i_move_info_ad4dafaa51ff2adf7377e408180564b0a}\label{class_u_i_move_info_ad4dafaa51ff2adf7377e408180564b0a} 
+int {\bfseries active\+Transformers}
+\item 
+\Hypertarget{class_u_i_move_info_a4cbe4b5849b76226fdf9ac4444585954}\label{class_u_i_move_info_a4cbe4b5849b76226fdf9ac4444585954} 
+float {\bfseries cooldown\+Timer} = -\/1
 \end{DoxyCompactItemize}
 
 

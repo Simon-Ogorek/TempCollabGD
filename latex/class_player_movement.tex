@@ -11,6 +11,25 @@ Inheritance diagram for Player\+Movement:\+\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_player_movement}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_movement_ae1592920b816c3c1a86c839d8cf9e10e}\label{class_player_movement_ae1592920b816c3c1a86c839d8cf9e10e} 
+enum \doxymbox{\hyperlink{class_player_movement_ae1592920b816c3c1a86c839d8cf9e10e}{Direction}} \{ {\bfseries Forward}
+, {\bfseries Backward}
+, {\bfseries Right}
+, {\bfseries Left}
+ \}
+\begin{DoxyCompactList}\small\item\em to match direction character goes relative to camera \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_movement_a01b75d741baa717ee9522256e7fb657e}\label{class_player_movement_a01b75d741baa717ee9522256e7fb657e} 
+void {\bfseries match\+Rotation} (\doxymbox{\hyperlink{class_player_movement_ae1592920b816c3c1a86c839d8cf9e10e}{Direction}} player\+Motion)
+\begin{DoxyCompactList}\small\item\em maches the rotation of the player relative to the rotation of the camera \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_aab526114f9c6d49b86979fa18419a072}\label{class_player_movement_aab526114f9c6d49b86979fa18419a072} 
+bool {\bfseries controller\+Move} ()
+\begin{DoxyCompactList}\small\item\em gives support for controller movement \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,6 +78,12 @@ bool {\bfseries grounded}
 \Hypertarget{class_player_movement_a93ae1ff379df51c808021ccabfb6502b}\label{class_player_movement_a93ae1ff379df51c808021ccabfb6502b} 
 Game\+Object {\bfseries camera\+Tracking\+Points}
 \begin{DoxyCompactList}\small\item\em Camera tracking points to be rotated accoding to player input. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_acfd8b1cd114e5024202a369a31efa06f}\label{class_player_movement_acfd8b1cd114e5024202a369a31efa06f} 
+Game\+Object {\bfseries free\+Look\+Camera}
+\begin{DoxyCompactList}\small\item\em free\+Look\+Camera that affects movement direction based on rotation. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_movement_a9738b31085b9080e4c83a3cd948473c5}\label{class_player_movement_a9738b31085b9080e4c83a3cd948473c5} 
+\doxymbox{\hyperlink{class_player_movement_ae1592920b816c3c1a86c839d8cf9e10e}{Direction}} {\bfseries player\+Direction}
+\begin{DoxyCompactList}\small\item\em player direction to adjust relative to camera. \end{DoxyCompactList}\item 
 \Hypertarget{class_player_movement_a45aecd70bc78dc344989ea56f4655ac3}\label{class_player_movement_a45aecd70bc78dc344989ea56f4655ac3} 
 float {\bfseries camera\+RotationX} = 5
 \item 

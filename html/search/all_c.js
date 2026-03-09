@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['uicontroller_0',['UIController',['../class_u_i_controller.html',1,'']]],
-  ['uienemyinfo_1',['UIEnemyInfo',['../class_u_i_enemy_info.html',1,'']]],
-  ['uimoveinfo_2',['UIMoveInfo',['../class_u_i_move_info.html',1,'']]],
-  ['uiplayerinfo_3',['UIPlayerInfo',['../class_u_i_player_info.html',1,'']]],
-  ['uistatusbar_4',['UIStatusBar',['../class_u_i_status_bar.html',1,'']]],
-  ['update_5',['Update',['../class_battle_manager.html#a5975f2475d79a4c93d7c52b37682e91e',1,'BattleManager']]]
+  ['softupdateenemyinfo_0',['SoftUpdateenemyInfo',['../class_u_i_enemy_info.html#a89363ae35a2e7a56b9483c53d793da50',1,'UIEnemyInfo']]],
+  ['softupdateplayerinfo_1',['SoftUpdatePlayerInfo',['../class_u_i_player_info.html#a0d396bea826820bb413edc84f3582fdf',1,'UIPlayerInfo']]],
+  ['speed_2',['speed',['../class_player_movement.html#a6800716352b83358ea16bc706dd88cbb',1,'PlayerMovement']]]
 ];

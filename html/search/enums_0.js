@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['targettypes_0',['targetTypes',['../class_move.html#aa784db74e1cd71dc4f0dab9f3d0a9557',1,'Move']]]
+  ['direction_0',['Direction',['../class_player_movement.html#ae1592920b816c3c1a86c839d8cf9e10e',1,'PlayerMovement']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_0',['Update',['../class_battle_manager.html#a5975f2475d79a4c93d7c52b37682e91e',1,'BattleManager']]]
+  ['getdata_0',['GetData',['../class_move.html#a64314d2642758d29fa4bae33a0ccbb51',1,'Move']]]
 ];

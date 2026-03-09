@@ -101,6 +101,24 @@ Inheritance diagram for PlayerMovement:</div>
   <img src="class_player_movement.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae1592920b816c3c1a86c839d8cf9e10e" id="r_ae1592920b816c3c1a86c839d8cf9e10e"><td class="memItemLeft"><a id="ae1592920b816c3c1a86c839d8cf9e10e" name="ae1592920b816c3c1a86c839d8cf9e10e"></a>enum &#160;</td><td class="memItemRight"><a class="el" href="#ae1592920b816c3c1a86c839d8cf9e10e">Direction</a> { <b>Forward</b>
+, <b>Backward</b>
+, <b>Right</b>
+, <b>Left</b>
+ }</td></tr>
+<tr class="memdesc:ae1592920b816c3c1a86c839d8cf9e10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">to match direction character goes relative to camera <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a01b75d741baa717ee9522256e7fb657e" id="r_a01b75d741baa717ee9522256e7fb657e"><td class="memItemLeft"><a id="a01b75d741baa717ee9522256e7fb657e" name="a01b75d741baa717ee9522256e7fb657e"></a>
+void&#160;</td><td class="memItemRight"><b>matchRotation</b> (<a class="el" href="#ae1592920b816c3c1a86c839d8cf9e10e">Direction</a> playerMotion)</td></tr>
+<tr class="memdesc:a01b75d741baa717ee9522256e7fb657e"><td class="mdescLeft">&#160;</td><td class="mdescRight">maches the rotation of the player relative to the rotation of the camera <br /></td></tr>
+<tr class="memitem:aab526114f9c6d49b86979fa18419a072" id="r_aab526114f9c6d49b86979fa18419a072"><td class="memItemLeft"><a id="aab526114f9c6d49b86979fa18419a072" name="aab526114f9c6d49b86979fa18419a072"></a>
+bool&#160;</td><td class="memItemRight"><b>controllerMove</b> ()</td></tr>
+<tr class="memdesc:aab526114f9c6d49b86979fa18419a072"><td class="mdescLeft">&#160;</td><td class="mdescRight">gives support for controller movement <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:abf3660ca2b1a352b4a9da98437c61aa3" id="r_abf3660ca2b1a352b4a9da98437c61aa3"><td class="memItemLeft"><a id="abf3660ca2b1a352b4a9da98437c61aa3" name="abf3660ca2b1a352b4a9da98437c61aa3"></a>
@@ -145,6 +163,12 @@ bool&#160;</td><td class="memItemRight"><b>grounded</b></td></tr>
 <tr class="memitem:a93ae1ff379df51c808021ccabfb6502b" id="r_a93ae1ff379df51c808021ccabfb6502b"><td class="memItemLeft"><a id="a93ae1ff379df51c808021ccabfb6502b" name="a93ae1ff379df51c808021ccabfb6502b"></a>
 GameObject&#160;</td><td class="memItemRight"><b>cameraTrackingPoints</b></td></tr>
 <tr class="memdesc:a93ae1ff379df51c808021ccabfb6502b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera tracking points to be rotated accoding to player input. <br /></td></tr>
+<tr class="memitem:acfd8b1cd114e5024202a369a31efa06f" id="r_acfd8b1cd114e5024202a369a31efa06f"><td class="memItemLeft"><a id="acfd8b1cd114e5024202a369a31efa06f" name="acfd8b1cd114e5024202a369a31efa06f"></a>
+GameObject&#160;</td><td class="memItemRight"><b>freeLookCamera</b></td></tr>
+<tr class="memdesc:acfd8b1cd114e5024202a369a31efa06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">freeLookCamera that affects movement direction based on rotation. <br /></td></tr>
+<tr class="memitem:a9738b31085b9080e4c83a3cd948473c5" id="r_a9738b31085b9080e4c83a3cd948473c5"><td class="memItemLeft"><a id="a9738b31085b9080e4c83a3cd948473c5" name="a9738b31085b9080e4c83a3cd948473c5"></a>
+<a class="el" href="#ae1592920b816c3c1a86c839d8cf9e10e">Direction</a>&#160;</td><td class="memItemRight"><b>playerDirection</b></td></tr>
+<tr class="memdesc:a9738b31085b9080e4c83a3cd948473c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">player direction to adjust relative to camera. <br /></td></tr>
 <tr class="memitem:a45aecd70bc78dc344989ea56f4655ac3" id="r_a45aecd70bc78dc344989ea56f4655ac3"><td class="memItemLeft"><a id="a45aecd70bc78dc344989ea56f4655ac3" name="a45aecd70bc78dc344989ea56f4655ac3"></a>
 float&#160;</td><td class="memItemRight"><b>cameraRotationX</b> = 5</td></tr>
 <tr class="memitem:a7a6459baaba78769e4599d88bf1e7c48" id="r_a7a6459baaba78769e4599d88bf1e7c48"><td class="memItemLeft"><a id="a7a6459baaba78769e4599d88bf1e7c48" name="a7a6459baaba78769e4599d88bf1e7c48"></a>
